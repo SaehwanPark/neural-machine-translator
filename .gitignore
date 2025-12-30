@@ -1,12 +1,38 @@
 # Python-generated files
 __pycache__/
 *.py[oc]
+*.pyd
 build/
 dist/
 wheels/
-*.egg-info
+*.egg-info/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
 
 # Virtual environments
-.venv
+.venv/
+.uv/
 
+# Jupyter / editor
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+
+# Env files
+.env
+.env.*
+
+# Project outputs / artifacts
+artifacts/
+outputs/
+checkpoints/
+runs/
+logs/
+
+# Merged codes in markdown
 merged_codes.md
