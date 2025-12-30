@@ -75,23 +75,23 @@ artifacts/<src>-<tgt>/
 ### 1) Prepare SentencePiece + vocab
 
 ```bash
-python nmt_cli.py prepare
+uv run nmt_cli.py prepare
 # or
-python nmt_cli.py prepare --src-lang de --tgt-lang en
+uv run nmt_cli.py prepare --src-lang de --tgt-lang en
 ```
 
 ### 2) Train
 
 ```bash
-python nmt_cli.py train
+uv run nmt_cli.py train
 # or
-python nmt_cli.py train --src-lang de --tgt-lang en
+uv run nmt_cli.py train --src-lang de --tgt-lang en
 ```
 
 ### 3) Decode (beam search)
 
 ```bash
-python nmt_cli.py decode \
+uv run nmt_cli.py decode \
   --src-file "$DATA_DIR/test.zh" \
   --out-file outputs/test.pred.en
 ```
@@ -99,7 +99,7 @@ python nmt_cli.py decode \
 For another pair:
 
 ```bash
-python nmt_cli.py decode \
+uv run nmt_cli.py decode \
   --src-lang de --tgt-lang en \
   --src-file "$DATA_DIR/test.de" \
   --out-file outputs/test.pred.en
@@ -114,12 +114,12 @@ Common decode knobs:
 
 ## Logging
 
-All logs use Python `logging` (no `print()`):
+All logs use Python `logging`:
 
 ```bash
-python nmt_cli.py train --log-level INFO
-python nmt_cli.py train --log-level DEBUG --log-file outputs/train.log
-python nmt_cli.py train --log-use-tqdm-handler
+uv run nmt_cli.py train --log-level INFO
+uv run nmt_cli.py train --log-level DEBUG --log-file outputs/train.log
+uv run nmt_cli.py train --log-use-tqdm-handler
 ```
 
 ---
@@ -127,5 +127,5 @@ python nmt_cli.py train --log-use-tqdm-handler
 ## Tests
 
 ```bash
-pytest
+uv run pytest
 ```
