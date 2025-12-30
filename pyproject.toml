@@ -1,7 +1,7 @@
 [project]
 name = "neural-machine-translator"
 version = "0.1.0"
-description = "Add your description here"
+description = "Neural Machine Translator"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
