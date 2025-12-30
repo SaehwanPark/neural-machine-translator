@@ -48,9 +48,7 @@ DATA_DIR=/home/saehwan/data/machine_translation
 ## Install (uv)
 
 ```bash
-uv venv
-source .venv/bin/activate
-uv pip install -e .
+uv sync
 ```
 
 ---
